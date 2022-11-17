@@ -6,6 +6,18 @@ Root = 7 ; listeyi soldan okumaya başlıyoruz. İlk eleman bizim için "root" o
 Sırasıyla kendinden sonra gelen her elemanı roottan itibaren roota göre;
 - büyük olanlar sağ alt dalına
 - küçük olanlar sol alt dalına yerleştirilir.
+Örneğin, 
+- 7>5 olduğu için sol dala yerleştiriyoruz.
+- 1<7 olduğu için sol daldan devam ediyoruz. 1<5 olduğu için 5'in altında sol dala yerleştiririz.
+- 8>7 olduğu için rootun sağına yerleştiriyoruz. 
+- 3<7 , 3<5 ve 3>1 olduğu için 1'in altında sağ dala yerleştiririz.
+- 6<7 , 6>5 olduğu için 5'in altında sağ dala yerleştiririz.
+- 0<7 , 0<5, 0<1 olduğu için 1'in altında sol dala yerleştiririz.
+- 9>7 , 9>8 olduğu için 8'in altında sağ dala yerleştiririz.
+- 4<7 , 4<5 , 4>1 , 4>3 olduğu için 3'ün altında sağ dala yerleştiririz.
+- 2<7 , 2<5 , 2>1 , 2<3 olduğu için 3'ün altında sol dala yerleştiririz. 
+- Her basamağı tek tek uyguladığımızda aşağıdaki binary-search-tree'yi elde ederiz. 
+
                   7
                /     \
               5       8
